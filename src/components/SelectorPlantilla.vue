@@ -15,7 +15,7 @@
                         <div class="row">
 
                             <div class="col" v-for="plantilla in cat_plantilla.plantillas" :key="plantilla">
-                                <Card>
+                                <Card @click="plantilla_seleccionada(plantilla)">
                                     <template #title><b></b></template>
                                     <template #content>
 
@@ -39,5 +39,10 @@ import { ref } from 'vue'
 
 import { CONFIG } from '../config'
 
+const emit = defineEmits(['tarjeta_conf']) 
+const props = defineProps(['tarjeta_conf'])
 
+function plantilla_seleccionada(plantilla){
+    emit("tarjeta_conf", plantilla)
+}
 </script>
