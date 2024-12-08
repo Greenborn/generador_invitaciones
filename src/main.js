@@ -4,6 +4,7 @@ import App from './App.vue'
 import 'primeicons/primeicons.css'
 import PrimeVue from 'primevue/config';
 import Aura from '@primevue/themes/aura';
+import { createPinia } from "pinia";
 
 import Splitter from "primevue/splitter";
 import SplitterPanel from 'primevue/splitterpanel';
@@ -26,8 +27,10 @@ import StepPanels from 'primevue/steppanels';
 import StepItem from 'primevue/stepitem';
 import Step from 'primevue/step';
 import StepPanel from 'primevue/steppanel';
+import Card from 'primevue/card';
 
 createApp(App)
+.component("Card", Card)
 .component("Stepper", Stepper)
 .component("StepList", StepList)
 .component("StepPanels", StepPanels)
@@ -49,6 +52,8 @@ createApp(App)
 .component("AccordionPanel", AccordionPanel)
 .component("AccordionHeader", AccordionHeader)
 .component("AccordionContent", AccordionContent)
+
+.use(createPinia())
 .use(PrimeVue, {
     theme: {
         preset: Aura

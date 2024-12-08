@@ -1,9 +1,43 @@
 <template>
-    En este componente se deberá seleccionar el tipo de plantilla
+    <div class="row">
+        <div class="col text-center">
+            Seleccione el tipo de invitación y la plantilla a usar.
+        </div>
+    </div>
 
-    Es decir si se trata por ej de una tarjeta de com`leaños, bautismo, dia de la madre etc.
+    <div class="row">
+        <div class="col" >
+            
+            <Accordion>
+                <AccordionPanel v-for="cat_plantilla in CONFIG.plantillas" :key="cat_plantilla" :value="cat_plantilla.id">
+                    <AccordionHeader>{{ cat_plantilla.nombre }}</AccordionHeader>
+                    <AccordionContent>
+                        <div class="row">
+
+                            <div class="col" v-for="plantilla in cat_plantilla.plantillas" :key="plantilla">
+                                <Card>
+                                    <template #title><b></b></template>
+                                    <template #content>
+
+                                        {{ plantilla }}
+                                        
+                                    </template>
+                                </Card>
+                            </div>
+
+                        </div>
+                    </AccordionContent>
+                </AccordionPanel>
+            </Accordion>
+
+        </div>
+    </div>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
+import { CONFIG } from '../config'
+
 
 </script>
