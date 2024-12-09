@@ -1,7 +1,16 @@
 <template>
-    <div class="row">
-        <div class="col">
-            Vista previa de la tarjeta
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <div class="w-100">
+
+                <div class="border" :style="{ 'height': tarjeta_conf?.plantilla?.dimensiones?.alto + 'px', 'width': tarjeta_conf?.plantilla?.dimensiones?.ancho + 'px' }">
+                </div>
+
+                <div class="elemento" v-for="elemento in configurable.elementos" :key="elemento" :style="{ 'left': elemento.posicion.x + 'px', 'top': elemento.posicion.y + 'px' }">
+                    {{ elemento }}
+                </div>
+
+            </div>
         </div>
     </div>
 
@@ -34,7 +43,22 @@ function get_configurable(tarjeta_conf) {
     for (let i = 0; i < keys_.length; i++)
         aux[keys_[i]] = {...tarjeta_conf.plantilla.parametros[keys_[i]], value: '' }
 
+    aux.elementos = []
+    aux.elementos.push(
+        {
+            tipo: "color_fondo",
+            valor: "#ffffff",
+            posicion: { x: 0, y: 0 },
+        }
+    )
+
     return aux
 }
 
 </script>
+
+<style scoped>
+.elemento{
+    position: absolute;
+}
+</style>
