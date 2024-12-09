@@ -10,7 +10,10 @@ export const CONFIG ={
                         "nombre": { "ej": "Cris", label: "Nombre Cumpleañero/a", "required": true },
                         "edad": { "ej": "30", label: "Edad", "required": true  },
                         "lugar_evento": { "ej": "Club Barrial", label: "Lugar del Evento", "required": true  },
-                    }
+                        "fotos": { "ej": "", label: "Dedicatoria", "required": false  },
+                        "elementos": []
+                    },
+                    "dimensiones": { "alto": 512, "ancho": 512 }
                 },
                 { 
                     "nombre": "Plantilla 2",
@@ -18,7 +21,10 @@ export const CONFIG ={
                         "nombre": { "ej": "Cris", label: "Nombre Cumpleañero/a", "required": true },
                         "edad": { "ej": "30", label: "Edad", "required": true  },
                         "lugar_evento": { "ej": "Club Barrial", label: "Lugar del Evento", "required": true  },
-                    }
+                        "fotos": { "ej": "", label: "Dedicatoria", "required": false  },
+                        "elementos": []
+                    },
+                    "dimensiones": { "alto": 512, "ancho": 512 }
                 },
                 { 
                     "nombre": "Plantilla 3",
@@ -26,11 +32,14 @@ export const CONFIG ={
                         "nombre": { "ej": "Cris", label: "Nombre Cumpleañero/a", "required": true },
                         "edad": { "ej": "30", label: "Edad", "required": true  },
                         "lugar_evento": { "ej": "Club Barrial", label: "Lugar del Evento", "required": true  },
-                    }
+                        "fotos": { "ej": "", label: "Dedicatoria", "required": false  },
+                        "elementos": []
+                    },
+                    "dimensiones": { "alto": 512, "ancho": 512 }
                 },
-            ]
+            ],
         },
-        "dia_de_la_madre": {
+        /*"dia_de_la_madre": {
             "nombre": "Día de la Madre",
             "id": 1,
             "plantillas": [
@@ -83,7 +92,7 @@ export const CONFIG ={
                     }
                 },
             ]
-        },
+        },*/
         "navidad": {
             "nombre": "Navidad",
             "id": 3,
@@ -92,21 +101,33 @@ export const CONFIG ={
                     "nombre": "Plantilla 1",
                     "parametros": {
                         "dedicatoria": { "ej": "Les desea una muy feliz Navidad", label: "Dedicatoria", "required": false  },
-                    }
+                        "fotos": { "ej": "", label: "Dedicatoria", "required": false  },
+                        "elementos": []
+                    },
+                    "dimensiones": { "alto": 512, "ancho": 512 }
                 },
                 { 
                     "nombre": "Plantilla 2",
                     "parametros": {
                         "dedicatoria": { "ej": "Les desea una muy feliz Navidad", label: "Dedicatoria", "required": false  },
-                    }
+                        "fotos": { "ej": "", label: "Dedicatoria", "required": false  },
+                        "elementos": []
+                    },
+                    "dimensiones": { "alto": 512, "ancho": 512 }
                 },
                 {   
                     "nombre": "Plantilla 3",
                     "parametros": {
                         "dedicatoria": { "ej": "Les desea una muy feliz Navidad", label: "Dedicatoria", "required": false  },
-                    }
+                        "fotos": { "ej": "", label: "Dedicatoria", "required": false  },
+                        "elementos": []
+                    },
+                    "dimensiones": { "alto": 512, "ancho": 512 }
                 },
             ]
         }
-    }
+    },
+    "tipografias":[
+
+    ]
 }

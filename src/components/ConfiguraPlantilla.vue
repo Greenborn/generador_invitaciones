@@ -7,7 +7,7 @@
 
     <div class="row">
         <div class="col">
-            {{ tarjeta_conf }}
+            <TarjetaPreview :tarjeta_conf="tarjeta_conf" ref="tarjet_prev_cmp" />
         </div>
     </div>
 
@@ -20,10 +20,17 @@
 
 <script setup>
 import { ref } from 'vue'
+import TarjetaPreview from './TarjetaPreview.vue';
+
+defineExpose({ update })
 
 const props = defineProps(['tarjeta_conf'])
 const emit = defineEmits(['tarjeta_conf_upd']) 
 
 const params = ref({})
+const tarjet_prev_cmp = ref()
 
+function update(){
+    tarjet_prev_cmp.value.update()
+}
 </script>
